@@ -61,7 +61,7 @@ app.get("/excel", async (req, res) => {
 
     // Add data to the worksheet
     result[0].forEach((row) => {
-      const values = Object.values({ id: row.id, lpr: row.lp });
+      const values = Object.values(row);
       worksheet.addRow(values);
     });
 
